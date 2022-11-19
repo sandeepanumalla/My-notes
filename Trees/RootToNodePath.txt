@@ -1,0 +1,27 @@
+----- root to node path -----
+
+
+root.val
+root.left
+root.right
+
+node -> 
+
+public boolean rootToNodePath(TreeNode root, int target){
+ if(root == null) return false;
+ if(root.val  == target) return true;
+ boolean left = rootToNodePath(root.left, target);
+ if(left){
+ stack.push(root.val);
+  return true; 
+ }
+ boolean right = rootToNodePath(root.right, target);
+ if(right){
+ stack.push(root.val);
+  return true;
+ }
+ return false;
+}
+
+
+rootToLeafNode

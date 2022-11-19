@@ -1,0 +1,8 @@
+Find the first element from sorted infinite array.
+
+Solution:
+
+1. find the lower and upper bound where target element lies in between.
+2. apply binary search for first occurence of element.
+
+

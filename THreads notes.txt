@@ -1,0 +1,24 @@
+Multitasking
+
+
+Multiprocessing
+when system executes multiples processes/jobs/programs
+concurrenty at same time.
+For ex. Playing a video on VLC
+VLC can have multiple processes that are being executed in taskmanager
+1. renders video
+2. plays audio for that video 
+3. can able to increase or decrease volume concurrently
+4. 
+
+
+Threads
+
+
+Process vs Thread
+
+process - A program which is in executing state. Heavy weight.
+Thread - A small subpart of process. light weight.
+
+
+

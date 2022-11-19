@@ -1,0 +1,41 @@
+Minimum Difference Element in a Sorted Array
+arr = [1, 3, 8, 10, 15] target = 12
+ans = 2
+
+Find the index of the target element. And Find the difference of their 
+neighbour elements and return lowest difference.
+
+
+For ex. 
+In arr 12 could be present after 12 and before 15.
+At index 4.
+We have to find the min difference element.
+If target element present in arr then min difference would be 0. 12 - 12 = 0.
+
+
+Solution:
+1. We can solve this problem using find floor element of a target. and return min difference.
+2. We can apply vanilla binary search. and when target is present return it otherwise 
+   start and high would be set in correct position such that high will point to floor value and low will point to ceil value.
+
+2 soultion:
+while(start <= end){
+ int mid = start + end / 2;
+ if(arr[mid] == target){
+  return mid - mid;
+ }
+ else if(arr[mid] < target){
+  end = mid - 1
+ }
+else{
+ start = mid + 1;
+}
+}
+
+//now low will point to ceil and high will point to floor.
+/so,
+ if(high >= 0 && low <= arr.lenght){
+int result = Math.min(arr[low], arr[high])
+return result;
+}
+

@@ -1,0 +1,20 @@
+Search an element in sorted infinite array.
+The size given is infinite.
+Target element is given.
+
+Approach: 
+1. Find the lower bound and upper bound indexes where the key lies in between.
+2. Then apply the Binary search.
+
+size = infinite;
+
+
+int low = 0;
+int end = 1;
+
+while(key < end){
+ low = end;
+ end = end * 2;
+}
+
+apply bst(low, end);

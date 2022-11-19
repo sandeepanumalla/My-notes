@@ -1,0 +1,31 @@
+Find an element from nearly sorted array.
+
+
+arr = [5, 10, 30, 20, 40]
+
+target = 5;
+
+start = 0;
+end = arr.length - 1;
+
+while(start <= end){
+int mid;
+if(start == end){ 
+ mid  = start;
+}
+else{
+ mid = (start + end) / 2;
+}
+if(arr[mid] == target){
+ return mid;
+}
+
+if(mid >= start && arr[mid - 1]) == target){
+ return mid - 1;
+}
+else if(mid <= end && arr[mid + 1] == target){
+ return mid + 1;
+}
+
+}
+

@@ -1,0 +1,37 @@
+
+Find the longest substring with unique characers/ not repeating characters.
+
+eg 1. aabcccbcb
+
+eg 2. pwwkewab
+
+
+output should be length of longest substring with unique characters.
+
+output 1. 3 -> abc
+
+output 2. 5 -> kewab
+
+Idea is to use Set datastructure to keep the track of unique elements.
+by using 2 pointers we can traverse the characters.
+
+start = 0
+end = 0;
+maxLength = 0;
+n = s.length();
+Set<String> set = new HashSet<>();
+
+
+while(end <= n){
+ char lastChar = s.charAt(end);
+ if(set.contains(lastChar)){
+ 
+  set.remove(s.charAt(start));
+   start++;
+ }
+ set.add(lastChar);
+ maxLength = Math.max(maxLength, (end - start) + 1);
+ end++;
+}
+
+return maxLength;
